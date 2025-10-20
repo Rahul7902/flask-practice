@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="consulting-ai">
+  <div class="container">
+    <div class="consulting-text">
+      <h1>Granite</h1>
+      <br><br><br><br><br><br>
+      <p>
+        Open, performant and trusted AI<br> models built for business.
+      </p>
+      <div class="consulting-btn-group">
+        <a href="{{ url_for('work_in_progress') }}" class="consulting-btn-blue">
+          Download the models
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="{{ url_for('work_in_progress') }}" class="consulting-btn-outline">
+          Try IBM® Granite® &nbsp;&nbsp;
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="#0f62fe" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+</section>
+{% endblock %}

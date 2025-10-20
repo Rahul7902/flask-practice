@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} | IBM</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- IBM Plex Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg px-4" style="padding-top: 0px; padding-bottom: 0px;">
+    <div class="d-flex align-items-center">
+        <!-- Logo -->
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Company Logo">
+        </a>
+
+        <!-- Divider line -->
+        <div class="vertical-divider"></div>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Align menus to the left -->
+    <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-3">
+            <!-- AI Dropdown -->
+            <li class="nav-item dropdown mx-2">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    AI
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ url_for('overview') }}">Overview →</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('watsonx') }}">WatsonX →</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('agents') }}">Agents →</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('granite_models') }}">Granite Models →</a></li>
+                </ul>
+            </li>
+            <li class="nav-item mx-2"><a class="nav-link" href="{{ url_for('hybrid_clouds') }}">Hybrid Cloud</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="{{ url_for('products') }}">Products</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="{{ url_for('consulting') }}">Consulting</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="{{ url_for('support') }}">Support</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="{{ url_for('think') }}">Think</a></li>
+        </ul>
+    </div>
+
+    <!-- Icons on the right -->
+    <div class="d-flex align-items-center ms-auto">
+        <button class="icon-btn"><i class="fas fa-search"></i></button>
+        <button class="icon-btn"><i class="fas fa-comments"></i></button>
+        <button class="icon-btn"><i class="fas fa-globe"></i></button>
+        <button class="icon-btn"><i class="fas fa-user"></i></button>
+    </div>
+</nav>
+
+{% block content %}
+
+{% endblock %}
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Column 1: Logo -->
+        <div class="footer-column footer-logo">
+            <img src="{{ url_for('static', filename='logo-footer.png') }}" alt="Company Logo">
+        </div>
+
+        <!-- Column 2: Discover Menu -->
+        <div class="footer-column">
+            <h4>Discover</h4>
+            <ul>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Consulting services</a></li>
+                <li><a href="#">Industries</a></li>
+                <li><a href="#">Case studies</a></li>
+                <li><a href="#">Financing</a></li>
+                <li><a href="#">Research</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Connect Menu -->
+        <div class="footer-column">
+            <h4>Connect</h4>
+            <ul>
+                <li><a href="#">Business partners</a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Newsletters</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">TechXchange community</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: About Menu -->
+        <div class="footer-column">
+            <h4>About</h4>
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Investor relations</a></li>
+                <li><a href="#">Leadership</a></li>
+                <li><a href="#">Newsroom</a></li>
+                <li><a href="#">Security, privacy and trust</a></li>
+                <li><a href="#">2023-24 India CSR Report</a></li>
+                <li><a href="#">IBM India CSR Policy</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

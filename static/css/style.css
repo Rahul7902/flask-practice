@@ -1,0 +1,811 @@
+/************************ base.html **************************/
+
+/* Global font */
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Shrink the navbar logo */
+.navbar-brand img {
+    height: 30px;
+    width: auto;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1.5px solid #e0e0e0;
+  padding: 0.3rem 1rem;
+  min-height: 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-link {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 100%;
+  padding-left: 100%;
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+/* Reduce navbar height */
+.navbar {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    min-height: 50px;
+}
+
+.mx-2 {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Left section (logo + divider + menu) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 28px;
+  margin-right: 15px;
+}
+
+/* Grey divider line */
+.divider {
+  width: 1px;
+  height: 28px;
+  background-color: #d1d1d1;
+  margin-right: 25px;
+}
+
+/* Menu items */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #0f62fe;
+}
+
+/* Right icons */
+.navbar-right i {
+  margin-left: 20px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+.navbar-right i:hover {
+  color: #0f62fe;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100vw;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  padding: 25px 80px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-content a {
+  display: inline-block;
+  margin-right: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+}
+
+.dropdown-content a:hover {
+  color: #0f62fe;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Make menu links full height of navbar */
+.navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-radius: 0;
+    color: #333;
+    font-size: 15px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hover effect for full-height background */
+.navbar-nav .nav-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* Right icons: borderless buttons with only icons */
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 0.3rem;
+    margin-left: 30px;
+    margin-right: auto;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+/* Footer background */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Container for logo + menus */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+/* Logo styling */
+.footer-logo img {
+    height: 65px;
+    width: auto;
+}
+
+/* Footer menus container */
+.footer-menus {
+    display: flex;
+    gap: 60px;
+}
+
+/* Individual menu column */
+.footer-menu h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu ul li {
+    margin-bottom: 8px;
+}
+
+.footer-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-menu ul li a:hover {
+    color: #0f62fe;
+}
+
+/* Responsive: stack menus on small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-menus {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Footer background */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Footer container: 4 columns */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between columns */
+}
+
+/* Each column */
+.footer-column {
+    flex: 1 1 200px;  /* Equal width, min 200px */
+}
+
+/* Logo column */
+.footer-logo img {
+    height: 65px;
+    width: auto;
+}
+
+/* Menu headings */
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Menu lists */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #0f62fe;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Hover effect same as navbar menus */
+.icon-btn:hover {
+    background-color: #f0f0f0; /* same grey as navbar menu hover */
+    color: #333; /* optional: keep icon color same */
+}
+
+/************************ index.html **************************/
+
+/* Heading color similar to image (adjust if you want exact) */
+.heading-gradient {
+  color: #2a55ff;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Shared button styles */
+.cta-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+  height: 100px;
+  text-decoration: none;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  text-align: left;
+  line-height: 1.2;
+  border-radius: 0; /* Sharp corners */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Primary solid blue button */
+.cta-primary {
+  background-color: #0f62fe;
+  color: #fff;
+  border: none;
+}
+
+.cta-primary i {
+  font-size: 22px;
+}
+
+/* Outline button */
+.cta-outline {
+  background-color: transparent;
+  color: #0f62fe;
+  border: 1px solid #0f62fe;
+}
+
+.cta-outline i {
+  font-size: 22px;
+}
+
+/* Hover effects */
+.cta-primary:hover {
+  background-color: #0353e9;
+}
+
+.cta-outline:hover {
+  background-color: #e6f0ff;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .cta-btn {
+    width: 100%;
+    height: 90px;
+  }
+}
+
+/************************ explore_ai_agents.html **************************/
+
+/* ---------- HERO SECTION (Left-aligned, image removed) ---------- */
+.hero-section {
+    background-color: #fff;
+    padding: 50px 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* Equal width buttons */
+.btn-demo,
+.btn-outline {
+    flex: 1 1 280px;
+    min-width: 350px;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex;
+    padding: 16px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Solid blue button */
+.btn-demo {
+    background-color: #0f62fe;
+    color: #fff;
+    border: none;
+}
+
+.btn-demo:hover {
+    background-color: #0353e9;
+}
+
+/* Outlined button */
+.btn-outline {
+    border: 1.5px solid #0f62fe;
+    color: #0f62fe;
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    background-color: #edf5ff;
+    color: #0043ce;
+}
+
+/* Icons */
+.btn-demo i,
+.btn-outline i {
+    font-size: 18px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-demo,
+    .btn-outline {
+        width: 100%;
+        max-width: none;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+}
+
+.btn-demo:hover,
+.btn-outline:hover {
+    text-decoration: none;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+}
+
+/************************ hybrid_cloud.html **************************/
+
+.hybrid-cloud {
+    background-color: #fff;
+    padding: 50px 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Local container to prevent overlap with global .container */
+.hybrid-cloud .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* Heading styling */
+.hybrid-cloud h1 {
+    font-size: 56px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+/* Paragraph text */
+.hybrid-cloud p {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/* Blue button */
+.hybrid-cloud .btn-blue {
+    display: inline-flex;
+    align-items: center;
+    background-color: #0f62fe;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.hybrid-cloud .btn-blue:hover {
+    background-color: #0353e9;
+    text-decoration: none;
+}
+
+/* SVG icon */
+.hybrid-cloud .btn-blue .icon {
+    margin-left: 10px;
+    stroke: white;
+    transition: transform 0.2s ease;
+}
+
+/* Slight hover animation on icon */
+.hybrid-cloud .btn-blue:hover .icon {
+    transform: translateX(3px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hybrid-cloud .container {
+        padding: 0 30px;
+    }
+
+    .hybrid-cloud h1 {
+        font-size: 36px;
+    }
+
+    .hybrid-cloud p {
+        font-size: 18px;
+    }
+
+    .hybrid-cloud .btn-blue {
+        font-size: 16px;
+        padding: 14px 20px;
+    }
+}
+
+/************************ ai-watsonx.html **************************/
+
+.ai-watsonx {
+  background-color: #fff;
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 50px 0;
+}
+
+.ai-watsonx .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* -------- Left Text Section -------- */
+.ai-watsonx .text-section {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+
+.ai-watsonx h1 {
+  font-size: 50px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.ai-watsonx p {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+/* -------- Blue Button -------- */
+.ai-watsonx .btn-blue {
+  display: inline-flex;
+  align-items: center;
+  background-color: #0f62fe;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.ai-watsonx .btn-blue:hover {
+  background-color: #0353e9;
+}
+
+.ai-watsonx .btn-blue .icon {
+  margin-left: 10px;
+  stroke: white;
+  transition: transform 0.2s ease;
+}
+
+.ai-watsonx .btn-blue:hover .icon {
+  transform: translateX(3px);
+}
+
+/* -------- Right Image Section -------- */
+.ai-watsonx .image-section {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.ai-watsonx .mockup-card {
+  width: 480px;
+  height: 320px;
+  background: linear-gradient(135deg, #c7b5ff, #e3dcff);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 992px) {
+  .ai-watsonx .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ai-watsonx h1 {
+    font-size: 42px;
+  }
+
+  .ai-watsonx p {
+    font-size: 18px;
+  }
+
+  .ai-watsonx .mockup-card {
+    width: 80%;
+    margin-top: 40px;
+  }
+}
+
+/************************ consulting-ai.html **************************/
+
+.consulting-ai {
+  background-color: #fff;
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 50px 0;
+}
+
+.consulting-ai .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* -------- Left Text Section -------- */
+.consulting-text {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+
+.consulting-text h1 {
+  font-size: 64px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.consulting-text p {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+/* -------- Buttons -------- */
+.consulting-btn-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.consulting-btn-blue,
+.consulting-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 16px 24px;
+  border-radius: 0;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Solid Blue Button */
+.consulting-btn-blue {
+  background-color: #0f62fe;
+  color: #fff;
+  border: none;
+}
+
+.consulting-btn-blue:hover {
+  background-color: #0353e9;
+}
+
+/* Outline Button */
+.consulting-btn-outline {
+  background-color: #fff;
+  color: #0f62fe;
+  border: 1.5px solid #0f62fe;
+}
+
+.consulting-btn-outline:hover {
+  background-color: #edf5ff;
+}
+
+/* SVG Icon */
+.consulting-btn-blue .icon,
+.consulting-btn-outline .icon {
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+
+.consulting-btn-blue:hover .icon,
+.consulting-btn-outline:hover .icon {
+  transform: translateX(3px);
+}
+
+/* -------- Right Image Section -------- */
+.consulting-image {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.consulting-mockup {
+  width: 480px;
+  height: 320px;
+  background: linear-gradient(135deg, #c7b5ff, #e3dcff);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 992px) {
+  .consulting-ai .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .consulting-text h1 {
+    font-size: 42px;
+  }
+
+  .consulting-text p {
+    font-size: 18px;
+  }
+
+  .consulting-btn-group {
+    justify-content: center;
+  }
+
+  .consulting-mockup {
+    width: 80%;
+    margin-top: 40px;
+  }
+}
